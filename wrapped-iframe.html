@@ -1,5 +1,11 @@
 <link rel="import" href="../polymer/polymer.html">
-
+<link rel="import" href="../paper-spinner/paper-spinner.html">
+<link rel="import" href="../paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../paper-fab/paper-fab.html">
+<link rel="import" href="../iron-icons/iron-icons.html">
+<link rel="import" href="../paper-input/paper-input.html">
+<link rel="import" href="../paper-input-container/paper-input-container.html">
+<link rel="import" href="../iron-input/iron-input.html">
 <dom-module id="wrapped-iframe">
 
     <style>
@@ -9,19 +15,46 @@
 
         }
 
-        div, iframe {
+        paper-icon-button {
+            color: var(--paper-red-300);
+            --paper-icon-button-ink-color: var(--paper-grey-a100);
+            --iron-icon-width: 10px;
+            --iron-icon-height: 10px;
+            padding: 0px 6px;
+        }
+
+        div {
+            display: flex;
+            flex: 1 1 100%;
+        }
+
+        input {
+            width: 200px;
+            height: 30px;
+        }
+
+        iframe {
             flex: 1 1 100%;
         }
     </style>
 
     <template>
-        <div>
-            <span>{{baseurl}}</span><input value="{{path::input}}">
-            <button on-tap="navigate">Go</button>
-            <button on-tap="navigate">back</button>
-            <button on-tap="navigate">forward</button>
+        <div style="position: absolute;bottom:0;left:0;right:0;top:0;display: flex;justify-content: center;align-content: center;align-items: center;">
+            <paper-spinner></paper-spinner>
         </div>
-        <iframe src="{{src}}"></iframe>
+        <div style="display: flex;align-items: center;align-content: center">
+            <paper-icon-button icon="arrow-back" on-tap="back"></paper-icon-button>
+            <paper-icon-button icon="arrow-forward" on-tap="forward"></paper-icon-button>
+            <paper-input no-label-float=true label="path" value="{{path::input}}">
+                <span prefix>{{baseurl}}</span>
+                <paper-icon-button suffix icon="clear"></paper-icon-button>
+            </paper-input>
+        </div>
+        <div>
+            <iframe src="{{src}}"
+                    onload="document.getElementsByTagName('paper-spinner')[0].removeAttribute('active');"></iframe>
+
+        </div>
 
     </template>
 
@@ -39,8 +72,8 @@
              * `fancy` indicates that the element should don a monocle and tophat,
              * while checking its pocket watch.
              */
-            src:{
-                type:String,
+            src: {
+                type: String,
             },
             baseurl: {
                 type: String,
@@ -54,7 +87,12 @@
         // Element Lifecycle
 
         ready: function () {
-            this.path="";
+            this.path = "";
+            document.querySelector('paper-input').addEventListener('change', function (e) {
+                if (document.activeElement == this) {
+                    this.navigate();
+                }
+            });
             // `ready` is called after all elements have been configured, but
             // propagates bottom-up. This element's children are ready, but parents
             // are not.
@@ -97,6 +135,7 @@
         navigate: function () {
             this.url = this.baseurl + this.path;
             document.getElementsByTagName("iframe")[0].setAttribute('src', this.url);
+            document.getElementsByTagName("paper-spinner")[0].setAttribute('active', true);
         },
         back: function () {
             this.$.preview.contentWindow.history.back();
