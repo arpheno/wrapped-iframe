@@ -49,6 +49,7 @@
                 <span prefix>{{baseurl}}</span>
                 <paper-icon-button suffix icon="clear"></paper-icon-button>
             </paper-input>
+             <input hidden="true" type="submit" />
         </div>
         <div>
             <iframe src="{{src}}"
@@ -89,9 +90,10 @@
         ready: function () {
             this.path = "";
             document.querySelector('paper-input').addEventListener('change', function (e) {
-                if (document.activeElement == this) {
-                    this.navigate();
-                }
+                console.log(e);
+                this.url = this.baseurl + this.path;
+                document.getElementsByTagName("iframe")[0].setAttribute('src', this.url);
+                document.getElementsByTagName("paper-spinner")[0].setAttribute('active', true);
             });
             // `ready` is called after all elements have been configured, but
             // propagates bottom-up. This element's children are ready, but parents
