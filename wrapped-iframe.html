@@ -21,7 +21,7 @@
             <button on-tap="navigate">back</button>
             <button on-tap="navigate">forward</button>
         </div>
-        <iframe id="preview" src=""></iframe>
+        <iframe src="{{src}}"></iframe>
 
     </template>
 
@@ -39,6 +39,9 @@
              * `fancy` indicates that the element should don a monocle and tophat,
              * while checking its pocket watch.
              */
+            src:{
+                type:String,
+            },
             baseurl: {
                 type: String,
                 value: function () {
@@ -92,7 +95,7 @@
          */
         navigate: function () {
             this.url = this.baseurl + this.path;
-            this.$.preview.src = this.url;
+            document.getElementsByTagName("iframe")[0].setAttribute('src', this.url);
         },
         back: function () {
             this.$.preview.contentWindow.history.back();
