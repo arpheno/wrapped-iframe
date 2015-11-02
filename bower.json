@@ -1,0 +1,29 @@
+{
+  "name": "wrapped-iframe",
+  "version": "1.0.0",
+  "authors": [
+    "Sebastian Wozny arpheno@gmail.com"
+  ],
+  "description": "An iframe wrapped with a navigation input and forward,backward buttons",
+  "keywords": [
+    "web-component",
+    "web-components",
+    "polymer",
+    "iframe"
+  ],
+  "main": "wrapped-iframe.html",
+  "license": "http://polymer.github.io/LICENSE.txt",
+  "homepage": "https://github.com/arpheno/wrapped-iframe/",
+  "ignore": [
+    "/.*",
+    "/test/",
+    "/demo/"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.0.0"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "web-component-tester": "*"
+  }
+}

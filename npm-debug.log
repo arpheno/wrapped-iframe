@@ -1,0 +1,181 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install', '-g', 'polyserve' ]
+2 info using npm@1.3.10
+3 info using node@v0.10.25
+4 verbose cache add [ 'polyserve', null ]
+5 verbose cache add name=undefined spec="polyserve" args=["polyserve",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'polyserve',
+6 verbose parsed url   path: 'polyserve',
+6 verbose parsed url   href: 'polyserve' }
+7 silly lockFile 002b2ef5-polyserve polyserve
+8 verbose lock polyserve /home/vagrant/.npm/002b2ef5-polyserve.lock
+9 silly lockFile 002b2ef5-polyserve polyserve
+10 silly lockFile 002b2ef5-polyserve polyserve
+11 verbose addNamed [ 'polyserve', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile 1bfcb230-polyserve polyserve@
+14 verbose lock polyserve@ /home/vagrant/.npm/1bfcb230-polyserve.lock
+15 silly addNameRange { name: 'polyserve', range: '*', hasData: false }
+16 verbose url raw polyserve
+17 verbose url resolving [ 'https://registry.npmjs.org/', './polyserve' ]
+18 verbose url resolved https://registry.npmjs.org/polyserve
+19 info trying registry request attempt 1 at 16:13:30
+20 http GET https://registry.npmjs.org/polyserve
+21 http 200 https://registry.npmjs.org/polyserve
+22 silly registry.get cb [ 200,
+22 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+22 silly registry.get     etag: '"9HLUC561RNDMSFNOUP1RV3ROQ"',
+22 silly registry.get     'content-type': 'application/json',
+22 silly registry.get     'cache-control': 'max-age=60',
+22 silly registry.get     'content-length': '5375',
+22 silly registry.get     'accept-ranges': 'bytes',
+22 silly registry.get     date: 'Mon, 02 Nov 2015 16:13:31 GMT',
+22 silly registry.get     via: '1.1 varnish',
+22 silly registry.get     age: '0',
+22 silly registry.get     connection: 'keep-alive',
+22 silly registry.get     'x-served-by': 'cache-lcy1125-LCY',
+22 silly registry.get     'x-cache': 'MISS',
+22 silly registry.get     'x-cache-hits': '0',
+22 silly registry.get     'x-timer': 'S1446480811.507068,VS0,VE100',
+22 silly registry.get     vary: 'Accept' } ]
+23 silly addNameRange number 2 { name: 'polyserve', range: '*', hasData: true }
+24 silly addNameRange versions [ 'polyserve', [ '0.1.0', '0.2.0', '0.2.1', '0.3.0', '0.4.0' ] ]
+25 verbose addNamed [ 'polyserve', '0.4.0' ]
+26 verbose addNamed [ '0.4.0', '0.4.0' ]
+27 silly lockFile 98eece46-polyserve-0-4-0 polyserve@0.4.0
+28 verbose lock polyserve@0.4.0 /home/vagrant/.npm/98eece46-polyserve-0-4-0.lock
+29 silly lockFile 94f26ce5-rg-polyserve-polyserve-0-4-0-tgz https://registry.npmjs.org/polyserve/-/polyserve-0.4.0.tgz
+30 verbose lock https://registry.npmjs.org/polyserve/-/polyserve-0.4.0.tgz /home/vagrant/.npm/94f26ce5-rg-polyserve-polyserve-0-4-0-tgz.lock
+31 verbose addRemoteTarball [ 'https://registry.npmjs.org/polyserve/-/polyserve-0.4.0.tgz',
+31 verbose addRemoteTarball   '8c0ce70c800f2790e066ed51e7542d5d7cfd6616' ]
+32 info retry fetch attempt 1 at 16:13:31
+33 verbose fetch to= /home/vagrant/tmp/npm-6385-2hGP_ucg/1446480811276-0.6994604349602014/tmp.tgz
+34 http GET https://registry.npmjs.org/polyserve/-/polyserve-0.4.0.tgz
+35 http 200 https://registry.npmjs.org/polyserve/-/polyserve-0.4.0.tgz
+36 verbose tar unpack /home/vagrant/tmp/npm-6385-2hGP_ucg/1446480811276-0.6994604349602014/tmp.tgz
+37 silly lockFile 46c44d07-11276-0-6994604349602014-package tar:///home/vagrant/tmp/npm-6385-2hGP_ucg/1446480811276-0.6994604349602014/package
+38 verbose lock tar:///home/vagrant/tmp/npm-6385-2hGP_ucg/1446480811276-0.6994604349602014/package /home/vagrant/.npm/46c44d07-11276-0-6994604349602014-package.lock
+39 silly lockFile 5b08e483-11276-0-6994604349602014-tmp-tgz tar:///home/vagrant/tmp/npm-6385-2hGP_ucg/1446480811276-0.6994604349602014/tmp.tgz
+40 verbose lock tar:///home/vagrant/tmp/npm-6385-2hGP_ucg/1446480811276-0.6994604349602014/tmp.tgz /home/vagrant/.npm/5b08e483-11276-0-6994604349602014-tmp-tgz.lock
+41 silly gunzTarPerm modes [ '755', '644' ]
+42 silly gunzTarPerm extractEntry package.json
+43 silly gunzTarPerm extractEntry .npmignore
+44 silly gunzTarPerm extractEntry README.md
+45 silly gunzTarPerm extractEntry main.js
+46 silly gunzTarPerm extractEntry bin/polyserve
+47 silly gunzTarPerm extractEntry src/bower_config.js
+48 silly gunzTarPerm extractEntry src/make_app.js
+49 silly gunzTarPerm extractEntry src/start_server.js
+50 silly lockFile 46c44d07-11276-0-6994604349602014-package tar:///home/vagrant/tmp/npm-6385-2hGP_ucg/1446480811276-0.6994604349602014/package
+51 silly lockFile 46c44d07-11276-0-6994604349602014-package tar:///home/vagrant/tmp/npm-6385-2hGP_ucg/1446480811276-0.6994604349602014/package
+52 silly lockFile 5b08e483-11276-0-6994604349602014-tmp-tgz tar:///home/vagrant/tmp/npm-6385-2hGP_ucg/1446480811276-0.6994604349602014/tmp.tgz
+53 silly lockFile 5b08e483-11276-0-6994604349602014-tmp-tgz tar:///home/vagrant/tmp/npm-6385-2hGP_ucg/1446480811276-0.6994604349602014/tmp.tgz
+54 verbose tar pack [ '/home/vagrant/.npm/polyserve/0.4.0/package.tgz',
+54 verbose tar pack   '/home/vagrant/tmp/npm-6385-2hGP_ucg/1446480811276-0.6994604349602014/package' ]
+55 verbose tarball /home/vagrant/.npm/polyserve/0.4.0/package.tgz
+56 verbose folder /home/vagrant/tmp/npm-6385-2hGP_ucg/1446480811276-0.6994604349602014/package
+57 silly lockFile 46c44d07-11276-0-6994604349602014-package tar:///home/vagrant/tmp/npm-6385-2hGP_ucg/1446480811276-0.6994604349602014/package
+58 verbose lock tar:///home/vagrant/tmp/npm-6385-2hGP_ucg/1446480811276-0.6994604349602014/package /home/vagrant/.npm/46c44d07-11276-0-6994604349602014-package.lock
+59 silly lockFile f7bc7ab9--npm-polyserve-0-4-0-package-tgz tar:///home/vagrant/.npm/polyserve/0.4.0/package.tgz
+60 verbose lock tar:///home/vagrant/.npm/polyserve/0.4.0/package.tgz /home/vagrant/.npm/f7bc7ab9--npm-polyserve-0-4-0-package-tgz.lock
+61 silly lockFile 46c44d07-11276-0-6994604349602014-package tar:///home/vagrant/tmp/npm-6385-2hGP_ucg/1446480811276-0.6994604349602014/package
+62 silly lockFile 46c44d07-11276-0-6994604349602014-package tar:///home/vagrant/tmp/npm-6385-2hGP_ucg/1446480811276-0.6994604349602014/package
+63 silly lockFile f7bc7ab9--npm-polyserve-0-4-0-package-tgz tar:///home/vagrant/.npm/polyserve/0.4.0/package.tgz
+64 silly lockFile f7bc7ab9--npm-polyserve-0-4-0-package-tgz tar:///home/vagrant/.npm/polyserve/0.4.0/package.tgz
+65 silly lockFile b9ebea81-rant-npm-polyserve-0-4-0-package /home/vagrant/.npm/polyserve/0.4.0/package
+66 verbose lock /home/vagrant/.npm/polyserve/0.4.0/package /home/vagrant/.npm/b9ebea81-rant-npm-polyserve-0-4-0-package.lock
+67 silly lockFile b9ebea81-rant-npm-polyserve-0-4-0-package /home/vagrant/.npm/polyserve/0.4.0/package
+68 silly lockFile b9ebea81-rant-npm-polyserve-0-4-0-package /home/vagrant/.npm/polyserve/0.4.0/package
+69 verbose tar unpack /home/vagrant/.npm/polyserve/0.4.0/package.tgz
+70 silly lockFile 89d26900-rant-npm-polyserve-0-4-0-package tar:///home/vagrant/.npm/polyserve/0.4.0/package
+71 verbose lock tar:///home/vagrant/.npm/polyserve/0.4.0/package /home/vagrant/.npm/89d26900-rant-npm-polyserve-0-4-0-package.lock
+72 silly lockFile f7bc7ab9--npm-polyserve-0-4-0-package-tgz tar:///home/vagrant/.npm/polyserve/0.4.0/package.tgz
+73 verbose lock tar:///home/vagrant/.npm/polyserve/0.4.0/package.tgz /home/vagrant/.npm/f7bc7ab9--npm-polyserve-0-4-0-package-tgz.lock
+74 silly gunzTarPerm modes [ '755', '644' ]
+75 silly gunzTarPerm extractEntry package.json
+76 silly gunzTarPerm extractEntry .npmignore
+77 silly gunzTarPerm extractEntry README.md
+78 silly gunzTarPerm extractEntry main.js
+79 silly gunzTarPerm extractEntry bin/polyserve
+80 silly gunzTarPerm extractEntry src/bower_config.js
+81 silly gunzTarPerm extractEntry src/make_app.js
+82 silly gunzTarPerm extractEntry src/start_server.js
+83 silly lockFile 89d26900-rant-npm-polyserve-0-4-0-package tar:///home/vagrant/.npm/polyserve/0.4.0/package
+84 silly lockFile 89d26900-rant-npm-polyserve-0-4-0-package tar:///home/vagrant/.npm/polyserve/0.4.0/package
+85 silly lockFile f7bc7ab9--npm-polyserve-0-4-0-package-tgz tar:///home/vagrant/.npm/polyserve/0.4.0/package.tgz
+86 silly lockFile f7bc7ab9--npm-polyserve-0-4-0-package-tgz tar:///home/vagrant/.npm/polyserve/0.4.0/package.tgz
+87 verbose chmod /home/vagrant/.npm/polyserve/0.4.0/package.tgz 644
+88 verbose chown /home/vagrant/.npm/polyserve/0.4.0/package.tgz [ 1000, 1000 ]
+89 silly lockFile 94f26ce5-rg-polyserve-polyserve-0-4-0-tgz https://registry.npmjs.org/polyserve/-/polyserve-0.4.0.tgz
+90 silly lockFile 94f26ce5-rg-polyserve-polyserve-0-4-0-tgz https://registry.npmjs.org/polyserve/-/polyserve-0.4.0.tgz
+91 silly lockFile 98eece46-polyserve-0-4-0 polyserve@0.4.0
+92 silly lockFile 98eece46-polyserve-0-4-0 polyserve@0.4.0
+93 silly lockFile 1bfcb230-polyserve polyserve@
+94 silly lockFile 1bfcb230-polyserve polyserve@
+95 silly resolved [ { name: 'polyserve',
+95 silly resolved     version: '0.4.0',
+95 silly resolved     description: 'A simple dev server for bower components',
+95 silly resolved     license:
+95 silly resolved      { type: 'BSD-3-Clause',
+95 silly resolved        url: 'http://polymer.github.io/LICENSE.txt' },
+95 silly resolved     main: 'main.js',
+95 silly resolved     bin: { polyserve: 'bin/polyserve' },
+95 silly resolved     scripts: { start: './bin/polyserve' },
+95 silly resolved     dependencies:
+95 silly resolved      { express: '^4.8.5',
+95 silly resolved        minimist: '^1.1.1',
+95 silly resolved        resolve: '^1.0.0',
+95 silly resolved        send: '^0.10.1' },
+95 silly resolved     readme: '# polyserve\n\nA simple web server for using bower components locally. `polyserve` serves\nproject files under `/components/{bower-name}/`. The local component defined in\n`bower.json` is served from the current directory, other component are served\nfrom `./bower_components/`.\n\n## Installation\n\n    npm install polyserve -g\n\n## Usage\n\n### Run `polyserve`\n\n    cd my-element/\n    polyserve\n\n### Browse files\n\nNavigate to `localhost:8080/components/my-element/demo.html`\n\n### Options\n\n  * `-p` The TCP port to use for the web server\n',
+95 silly resolved     readmeFilename: 'README.md',
+95 silly resolved     _id: 'polyserve@0.4.0',
+95 silly resolved     dist: { shasum: '5be83b95e71ff9549a58bbc775244212fd0d026a' },
+95 silly resolved     _from: 'polyserve@',
+95 silly resolved     _resolved: 'https://registry.npmjs.org/polyserve/-/polyserve-0.4.0.tgz' } ]
+96 info install polyserve@0.4.0 into /usr/local/lib
+97 info installOne polyserve@0.4.0
+98 info /usr/local/lib/node_modules/polyserve unbuild
+99 verbose tar unpack /home/vagrant/.npm/polyserve/0.4.0/package.tgz
+100 silly lockFile 96eeba18-local-lib-node-modules-polyserve tar:///usr/local/lib/node_modules/polyserve
+101 verbose lock tar:///usr/local/lib/node_modules/polyserve /home/vagrant/.npm/96eeba18-local-lib-node-modules-polyserve.lock
+102 silly lockFile f7bc7ab9--npm-polyserve-0-4-0-package-tgz tar:///home/vagrant/.npm/polyserve/0.4.0/package.tgz
+103 verbose lock tar:///home/vagrant/.npm/polyserve/0.4.0/package.tgz /home/vagrant/.npm/f7bc7ab9--npm-polyserve-0-4-0-package-tgz.lock
+104 silly gunzTarPerm modes [ '755', '644' ]
+105 error Error: EACCES, mkdir '/usr/local/lib/node_modules/polyserve'
+105 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/polyserve']
+105 error   errno: 3,
+105 error   code: 'EACCES',
+105 error   path: '/usr/local/lib/node_modules/polyserve',
+105 error   fstream_type: 'Directory',
+105 error   fstream_path: '/usr/local/lib/node_modules/polyserve',
+105 error   fstream_class: 'DirWriter',
+105 error   fstream_stack:
+105 error    [ '/usr/lib/nodejs/fstream/lib/dir-writer.js:36:23',
+105 error      '/usr/lib/nodejs/mkdirp/index.js:37:53',
+105 error      'Object.oncomplete (fs.js:107:15)' ] }
+106 error Please try running this command again as root/Administrator.
+107 error System Linux 3.13.0-24-generic
+108 error command "/usr/bin/nodejs" "/usr/bin/npm" "install" "-g" "polyserve"
+109 error cwd /vagrant
+110 error node -v v0.10.25
+111 error npm -v 1.3.10
+112 error path /usr/local/lib/node_modules/polyserve
+113 error fstream_path /usr/local/lib/node_modules/polyserve
+114 error fstream_type Directory
+115 error fstream_class DirWriter
+116 error code EACCES
+117 error errno 3
+118 error stack Error: EACCES, mkdir '/usr/local/lib/node_modules/polyserve'
+119 error fstream_stack /usr/lib/nodejs/fstream/lib/dir-writer.js:36:23
+119 error fstream_stack /usr/lib/nodejs/mkdirp/index.js:37:53
+119 error fstream_stack Object.oncomplete (fs.js:107:15)
+120 verbose exit [ 3, true ]
