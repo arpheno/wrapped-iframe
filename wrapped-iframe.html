@@ -80,6 +80,10 @@
             src: {
                 type: String,
             },
+            load:{
+              type:String,
+                value: "http://www.example.net"
+            },
             baseurl: {
                 type: String,
                 value: function () {
@@ -93,6 +97,8 @@
 
         ready: function () {
             this.path = "";
+            document.getElementsByTagName("paper-spinner")[0].setAttribute('active', true);
+            document.getElementsByTagName("iframe")[0].setAttribute('src', this.load);
             // `ready` is called after all elements have been configured, but
             // propagates bottom-up. This element's children are ready, but parents
             // are not.
