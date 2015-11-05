@@ -107,8 +107,9 @@
 
         ready: function () {
             this.path = "";
+            baseload=this.load;
             setTimeout(function(){
-                document.getElementsByTagName("iframe")[0].setAttribute('src', this.load);
+                document.getElementsByTagName("iframe")[0].setAttribute('src', baseload);
                 document.getElementsByTagName("paper-spinner")[0].setAttribute('active', true);
             },500);
             // `ready` is called after all elements have been configured, but
