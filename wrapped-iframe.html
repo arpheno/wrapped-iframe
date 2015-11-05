@@ -54,7 +54,7 @@
             function post_load(){
                 $('a',$('iframe').contents()).each(
                         function(){
-                            $(this)[0].setAttribute("href",$(this)[0].baseURI + $(this)[0].path);
+                            $(this)[0].setAttribute("href",$(this)[0].baseURI + $(this)[0].href);
                         }
                 );
                 document.getElementsByTagName('paper-spinner')[0].removeAttribute('active');
