@@ -58,6 +58,8 @@
                             if ($(this)[0].pathname[0] == "/") {
                                 if($(this)[0].baseURI.indexOf("t//")) {
                                     var base = $(this)[0].baseURI.slice(0, $(this)[0].baseURI.indexOf("t//") + 2);
+                                }else{
+                                    var base =  $(this)[0].baseURI;
                                 }
                                 $(this)[0].setAttribute("href", base + $(this)[0].pathname);
                             }
