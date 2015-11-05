@@ -50,9 +50,19 @@
             </paper-input>
             <input hidden="true" type="submit"/>
         </div>
+        <script type="text/javascript">
+            function post_load(){
+                $('a',$('iframe').contents()).each(
+                        function(){
+                            $(this)[0].setAttribute("href",$(this)[0].baseURI + $(this)[0].path);
+                        }
+                );
+                document.getElementsByTagName('paper-spinner')[0].removeAttribute('active');
+            }
+        </script>
         <div style="flex:0 0 90%;">
             <iframe src="{{src}}"
-                    onload="document.getElementsByTagName('paper-spinner')[0].removeAttribute('active');"></iframe>
+                    onload="post_load();"></iframe>
 
         </div>
 
@@ -97,8 +107,10 @@
 
         ready: function () {
             this.path = "";
-            document.getElementsByTagName("paper-spinner")[0].setAttribute('active', true);
-            document.getElementsByTagName("iframe")[0].setAttribute('src', this.load);
+            setTimedOut(function(){
+                document.getElementsByTagName("iframe")[0].setAttribute('src', this.load);
+                document.getElementsByTagName("paper-spinner")[0].setAttribute('active', true);
+            },500);
             // `ready` is called after all elements have been configured, but
             // propagates bottom-up. This element's children are ready, but parents
             // are not.
