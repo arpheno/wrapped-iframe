@@ -56,7 +56,7 @@
                         function () {
 
                             if ($(this)[0].pathname[0] == "/") {
-                                if($(this)[0].baseURI.indexOf("t//")) {
+                                if($(this)[0].baseURI.indexOf("t//")>-1) {
                                     var base = $(this)[0].baseURI.slice(0, $(this)[0].baseURI.indexOf("t//") + 2);
                                 }else{
                                     var base =  $(this)[0].baseURI;
