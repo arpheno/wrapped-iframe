@@ -51,10 +51,14 @@
             <input hidden="true" type="submit"/>
         </div>
         <script type="text/javascript">
-            function post_load(){
-                $('a',$('iframe').contents()).each(
-                        function(){
-                            $(this)[0].setAttribute("href",$(this)[0].baseURI + $(this)[0].href);
+            function post_load() {
+                $('a', $('iframe').contents()).each(
+                        function () {
+
+                            if ($(this)[0].href[0] == "/") {
+
+                                $(this)[0].setAttribute("href", $(this)[0].baseURI + $(this)[0].href);
+                            }
                         }
                 );
                 document.getElementsByTagName('paper-spinner')[0].removeAttribute('active');
@@ -90,8 +94,8 @@
             src: {
                 type: String,
             },
-            load:{
-              type:String,
+            load: {
+                type: String,
                 value: "http://www.example.net"
             },
             baseurl: {
@@ -107,11 +111,11 @@
 
         ready: function () {
             this.path = "";
-            baseload=this.load;
-            setTimeout(function(){
+            baseload = this.load;
+            setTimeout(function () {
                 document.getElementsByTagName("iframe")[0].setAttribute('src', baseload);
                 document.getElementsByTagName("paper-spinner")[0].setAttribute('active', true);
-            },500);
+            }, 500);
             // `ready` is called after all elements have been configured, but
             // propagates bottom-up. This element's children are ready, but parents
             // are not.
