@@ -107,7 +107,7 @@
 
         ready: function () {
             this.path = "";
-            setTimedOut(function(){
+            setTimeOut(function(){
                 document.getElementsByTagName("iframe")[0].setAttribute('src', this.load);
                 document.getElementsByTagName("paper-spinner")[0].setAttribute('active', true);
             },500);
