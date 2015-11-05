@@ -56,8 +56,8 @@
                         function () {
 
                             if ($(this)[0].pathname[0] == "/") {
-
-                                $(this)[0].setAttribute("href", $(this)[0].baseURI + $(this)[0].pathname);
+                                var base=$(this)[0].baseURI.slice(0,$(this)[0].baseURI.indexOf("t//")+2);
+                                $(this)[0].setAttribute("href", base + $(this)[0].pathname);
                             }
                         }
                 );
