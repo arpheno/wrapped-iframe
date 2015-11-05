@@ -55,9 +55,9 @@
                 $('a', $('iframe').contents()).each(
                         function () {
 
-                            if ($(this)[0].href[0] == "/") {
+                            if ($(this)[0].pathname[0] == "/") {
 
-                                $(this)[0].setAttribute("href", $(this)[0].baseURI + $(this)[0].href);
+                                $(this)[0].setAttribute("href", $(this)[0].baseURI + $(this)[0].pathname);
                             }
                         }
                 );
